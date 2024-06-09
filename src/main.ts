@@ -17,11 +17,7 @@ import Utils from './utils';
 
 export const redis =
   process.env.REDIS_HOST &&
-  new Redis({
-    host: process.env.REDIS_HOST,
-    port: Number(process.env.REDIS_PORT),
-    password: process.env.REDIS_PASSWORD,
-  });
+  new Redis(`rediss://default:${process.env.REDIS_PASSWORD}@${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`);
 
 const fastify = Fastify({
   maxParamLength: 1000,
@@ -158,7 +154,7 @@ export const tmdbApi = process.env.TMDB_KEY && process.env.TMDB_KEY;
       });
     });
 
-    fastify.listen({ port: PORT, host: '0.0.0.0' }, (e, address) => {
+    fastify.listen({ port: PORT, host: 'localhost' }, (e, address) => {
       if (e) throw e;
       console.log(`server listening on ${address}`);
     });
