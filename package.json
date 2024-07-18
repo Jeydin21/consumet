@@ -8,10 +8,6 @@
         "build": "tsc",
         "lint": "prettier --write \"src/**/*.ts\""
     },
-    "engines": {
-        "node": ">=12.5.0",
-        "yarn": ">=1.17.3"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/consumet/consumet.ts.git"
@@ -33,7 +29,7 @@
         "cheerio": "1.0.0-rc.12",
         "dotenv": "^16.0.3",
         "fastify": "^4.10.2",
-        "fastify-cors": "^6.1.0",
+        "fastify-cors": "^7.0.0",
         "ioredis": "^5.2.4",
         "reconnecting-websocket": "^4.4.0",
         "ts-node": "^10.9.1",
