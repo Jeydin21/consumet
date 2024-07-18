@@ -8,6 +8,10 @@
         "build": "tsc",
         "lint": "prettier --write \"src/**/*.ts\""
     },
+    "engines": {
+        "node": ">=12.5.0",
+        "yarn": ">=1.17.3"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/consumet/consumet.ts.git"
